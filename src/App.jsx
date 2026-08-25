@@ -3,7 +3,7 @@ import Hero from './components/Hero';
 import CategoryNav from './components/CategoryNav';
 import ProductGrid from './components/ProductGrid';
 import AboutSection from './components/AboutSection';
-import AwardsSection from './components/AwardsSection';
+
 import Footer from './components/Footer';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <main>
         <Hero />
         <AboutSection />
-        <AwardsSection />
+
         <CategoryNav />
         <ProductGrid />
       </main>

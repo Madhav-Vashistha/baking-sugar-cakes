@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { siteData } from '../data/content';
 
 export default function ProductGrid() {
@@ -9,22 +10,49 @@ export default function ProductGrid() {
     };
   }).filter(cat => cat.products.length > 0);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  };
+
   return (
     <div className="bg-[#FAFAFA] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {categoriesWithProducts.map((category, index) => (
           <div key={category.id} id={category.id} className={index > 0 ? "mt-20" : ""}>
-            <div className="flex items-center justify-between mb-8">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center justify-between mb-8"
+            >
               <h2 className="font-display text-3xl text-brand-dark">{category.name}</h2>
               <a href={siteData.whatsappLink} className="hidden sm:block text-sm font-medium text-brand-gold hover:text-brand-dark transition-colors uppercase tracking-wider">
                 Order Custom &rarr;
               </a>
-            </div>
+            </motion.div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            >
               {category.products.map(product => (
-                <div key={product.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                <motion.div variants={itemVariants} key={product.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <img 
                       src={product.image} 
@@ -52,9 +80,9 @@ export default function ProductGrid() {
                       </a>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         ))}
 
@@ -62,3 +90,4 @@ export default function ProductGrid() {
     </div>
   );
 }
+

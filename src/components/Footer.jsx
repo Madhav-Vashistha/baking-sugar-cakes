@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           
           <div className="md:col-span-1">
-            <h3 className="font-display text-2xl mb-4 tracking-wider">PINK FROST</h3>
+            <h3 className="font-display text-2xl mb-4 tracking-wider">BAKING SUGAR CAKES</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               {siteData.tagline}. {siteData.bio}
             </p>

@@ -1,19 +1,19 @@
 export const siteData = {
-  brandName: "Pink Frost Patisserie",
-  tagline: "Noida Cake Artist | Custom Celebration Cakes",
-  bio: "Specializing in custom luxury cakes, engagement cakes, and bespoke desserts. Winner of Bakers Studio Season 2 on Zee TV and IICM 2026 Promising Talent.",
+  brandName: "Baking Sugar Cakes",
+  tagline: "Cake Artist | Surat",
+  bio: "Custom cakes | Specialised in fondant free & semi fondant cakes | 100% Veg | We deliver all across SURAT | Ask for Offline Classes",
   owner: {
-    name: "Deepaali Arora",
-    role: "Founder & Executive Pastry Chef",
+    name: "Bhumi Amipare",
+    role: "Cake Artist",
     image: "/owner.png",
-    bio: "Ranked among the Top 25 Bakers in Noida, Deepaali is a celebrated cake artist known for her intricate designs, wafer paper art, and luxurious flavor profiles. As the winner of Bakers Studio Season 2, she brings passion and precision to every custom creation."
+    bio: "Cake Artist based in Surat, specialising in custom fondant free and semi fondant cakes."
   },
-  location: "Noida, UP",
-  address: "Noida, UP (Online/Home-based Bakery)",
-  phone: "+91 88001 92976",
-  email: "hello@pinkfrostpatisserie.com",
-  instagram: "https://www.instagram.com/pinkfrost_patisserie/",
-  whatsappLink: "https://wa.me/918800192976?text=Hi!%20I%20would%20like%20to%20inquire%20about%20a%20custom%20cake.",
+  location: "Surat, Gujarat",
+  address: "Surat",
+  phone: "+91 97262 03004",
+  email: "hello@bakingsugarcakes.com",
+  instagram: "https://www.instagram.com/baking.sugar_cake/",
+  whatsappLink: "https://wa.me/919726203004?text=Hi!%20I%20would%20like%20to%20inquire%20about%20a%20custom%20cake.",
   
   awards: [
     {

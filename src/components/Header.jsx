@@ -1,14 +1,20 @@
 import { useState } from 'react';
 import { Menu, X, Search, ShoppingBag } from 'lucide-react';
 import { siteData } from '../data/content';
+import { motion } from 'framer-motion';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <motion.header 
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-gold/20 shadow-sm"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
@@ -22,9 +28,13 @@ export default function Header() {
 
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center justify-center flex-1 md:flex-none">
-            <a href="#" className="font-display font-bold text-2xl tracking-wider text-brand-dark">
-              PINK FROST
-              <span className="block text-[10px] uppercase tracking-[0.3em] font-sans text-center text-gray-500 mt-1">Patisserie</span>
+            <a href="#" className="flex flex-col items-center justify-center group">
+              <span className="font-display font-bold text-3xl tracking-widest text-brand-dark group-hover:text-brand-gold transition-colors duration-300">
+                BAKING SUGAR
+              </span>
+              <span className="font-display italic text-brand-gold text-lg tracking-[0.2em] -mt-1">
+                Cakes
+              </span>
             </a>
           </div>
 
@@ -79,6 +89,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }
