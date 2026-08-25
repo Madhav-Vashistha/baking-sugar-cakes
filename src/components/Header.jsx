@@ -29,10 +29,10 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center justify-center flex-1 md:flex-none">
             <a href="#" className="flex flex-col items-center justify-center group">
-              <span className="font-display font-bold text-3xl tracking-widest text-brand-dark group-hover:text-brand-gold transition-colors duration-300">
+              <span className="font-display font-bold text-xl sm:text-2xl md:text-3xl tracking-widest text-brand-dark group-hover:text-brand-gold transition-colors duration-300">
                 BAKING SUGAR
               </span>
-              <span className="font-display italic text-brand-gold text-lg tracking-[0.2em] -mt-1">
+              <span className="font-display italic text-brand-gold text-sm md:text-lg tracking-[0.2em] -mt-1">
                 Cakes
               </span>
             </a>
